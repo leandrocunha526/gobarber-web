@@ -32,9 +32,9 @@ export function* signUp({ payload }) {
             name,
             email,
             password,
-            provider: true,
+            provider: false, // all register for common users
         });
-        history.push("/");
+        toast.success("Cadastro realizado com sucesso!");
     } catch (err) {
         toast.error("Falha no cadastro, verifique seus dados");
         yield put(signFailure());
