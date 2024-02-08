@@ -1,16 +1,16 @@
-import Reactostron from "reactotron-react-js"
+import Reactotron from "reactotron-react-js";
 import { reactotronRedux } from "reactotron-redux";
-import reactotronSaga from "reactotron-redux-saga";
+import reactotronReduxSaga from "reactotron-redux-saga";
 
-// eslint-disable-next-line no-undef
-if(process.env.NODE_ENV === 'development'){
-  const tron = Reactostron.configure({host: '0.0.0.0'})
-    .use(reactotronRedux())
-    .use(reactotronSaga())
-    .connect();
+if (process.env.NODE_ENV === "development") {
+    const tron = Reactotron.configure({name: "React JS App"})
+        .use(reactotronRedux())
+        .use(reactotronReduxSaga())
+        .connect();
 
-  console.tron = tron
+    console.tron = tron;
+    window.tron = tron;
 
-  // Let's clear Reactotron on every time we load the app
-  tron.clear();
+    // Let's clear Reactotron on every time we load the app
+    tron.clear();
 }

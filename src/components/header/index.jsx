@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useSelector } from "react-redux";
-import Notifications from "../Notifications";
-import logo from "../../assets/logo-purple.svg";
+import Notifications from "../notifications";
+import logo from "../../assets/logo.svg";
 import { Container, Content, Profile } from "./styles";
 import { Link } from "react-router-dom";
 

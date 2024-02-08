@@ -1,11 +1,14 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
-import { Routes, Route } from "react-router-dom"
+import { Switch } from "react-router-dom";
+import Route from "./routes.jsx";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
 
-export default function Routers() {
+export default function Routes() {
     return (
-        <Routes>
-            <Route path="/" element={<h1 style={{"color": "white"}}>Bem vindo</h1>} />
-        </Routes>
+        <Switch>
+            <Route path="/" exact component={SignIn} />
+            <Route path="/register" component={SignUp} />
+        </Switch>
     );
 }
