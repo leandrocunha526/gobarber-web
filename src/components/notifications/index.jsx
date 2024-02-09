@@ -16,10 +16,10 @@ export default function Notifications() {
     const [visible, setVisible] = useState(false);
     const [notifications, setNotifications] = useState([]);
 
-    const notificationComp = useRef(null);
+    const notificationsComp = useRef(null);
 
     function handleGlobalClick(e) {
-        const clickedOutsideComponent = !notificationComp.current.contains(
+        const clickedOutsideComponent = !notificationsComp.current.contains(
             e.target,
         );
 
@@ -39,11 +39,11 @@ export default function Notifications() {
         document.addEventListener("keydown", handleGlobalKeyPress, false);
 
         async function loadNotifications() {
-            const response = await fetch("/api/notifications");
+            const response = await api.get("/notification");
             const data = response.data.map((notification) => ({
                 ...notification,
                 timeDistance: formatDistance(
-                    parseISO(notification.createdAt),
+                    parseISO(notification.created_at),
                     new Date(),
                     {
                         addSuffix: true,
@@ -64,7 +64,7 @@ export default function Notifications() {
                 false,
             );
         };
-    }, []); // eslint-disable-line
+    }, []);
 
     const hasUnread = useMemo(
         () => !!notifications.find((notification) => !notification.read),
@@ -72,7 +72,7 @@ export default function Notifications() {
     );
 
     async function handleMarkAsRead(id) {
-        await api.put(`/notifications/${id}`);
+        await api.put(`/notification/${id}`);
         const newNotifications = notifications.map((notification) => {
             return notification._id === id
                 ? { ...notification, read: true }
@@ -90,7 +90,7 @@ export default function Notifications() {
             <Badge hasUnread={hasUnread} onClick={handleToggleVisible}>
                 <MdNotifications color="#7159c1" size={20} />
             </Badge>
-            <NotificationList ref={notificationComp} visible={visible}>
+            <NotificationList ref={notificationsComp} visible={visible}>
                 <Scroll>
                     {notifications.map((notification) => (
                         <Notification
