@@ -6,7 +6,7 @@ export const Container = styled.div`
     position: relative;
 `;
 
-export const Badge = styled.button`
+export const Badge = styled.div`
     background: none;
     border: 0;
     position: relative;
