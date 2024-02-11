@@ -11,6 +11,15 @@ export default function Routes() {
             <Route path="/" exact component={SignIn} />
             <Route path="/register" component={SignUp} />
             <Route path="/dashboard" component={Dashboard} isPrivate />
+            <Route
+                path="/profile"
+                component={() => (
+                    <h1 style={{ color: "white", textAlign: "center" }}>
+                        Profile in soon...
+                    </h1>
+                )}
+                isPrivate
+            />
         </Switch>
     );
 }
