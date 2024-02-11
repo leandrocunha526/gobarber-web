@@ -2104,6 +2104,13 @@ reactotron-core-client@2.8.13:
   dependencies:
     reactotron-core-contract "0.2.1"
 
+reactotron-core-client@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/reactotron-core-client/-/reactotron-core-client-2.9.0.tgz#b25c2642e8636ca7d8513c01efb2c95609fd898f"
+  integrity sha512-QLoeqZTl7aSbqVBFOxTMZ6yQzIxMyx/trVzdqfNU9/W2yx9wec/rddn8tRONqi76WgiSEuP/YROS2C7dVATo/g==
+  dependencies:
+    reactotron-core-contract "0.2.1"
+
 reactotron-core-contract@0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/reactotron-core-contract/-/reactotron-core-contract-0.2.1.tgz#c46eae650a95443345a09b7661386b95c88d37b6"
