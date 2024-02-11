@@ -5,12 +5,11 @@ export const Container = styled.div`
     margin: 50px auto;
     display: flex;
     flex-direction: column;
-    flex-direction: row;
 
     header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        align-self: center;
 
         button {
             border: 0;
