@@ -26,9 +26,10 @@ export default function Header() {
                             src={
                                 profile.avatar !== null
                                     ? profile.avatar.url
-                                    : `https://ui-avatars.com/api/?name=${profile.name}&size=32`
+                                    : `https://ui-avatars.com/api/?name=${profile.name}`
                             }
                             alt="Avatar"
+                            width={32}
                         />
                     </Profile>
                 </aside>

@@ -52,7 +52,7 @@ export function setToken({ payload }) {
 }
 
 export function signOut() {
-    history.push("/");
+    history.go("/");
 }
 
 export default all([

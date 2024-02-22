@@ -4,6 +4,7 @@ import Route from "./routes.jsx";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
+import Profile from "../pages/Profile";
 
 export default function Routes() {
     return (
@@ -13,11 +14,7 @@ export default function Routes() {
             <Route path="/dashboard" component={Dashboard} isPrivate />
             <Route
                 path="/profile"
-                component={() => (
-                    <h1 style={{ color: "white", textAlign: "center" }}>
-                        Profile in soon...
-                    </h1>
-                )}
+                component={Profile}
                 isPrivate
             />
         </Switch>
