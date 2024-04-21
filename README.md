@@ -4,9 +4,9 @@
 
 ### About
 
-GoBarber is a project is a complete application for scheduling barbershop services, including features for users to schedule appointments, service providers to manage their schedule and administrators to monitor the general flow of the system.
+GoBarber is a project that is a complete application for scheduling barbershop services (an application developed with React Native and Expo for user scheduling and this application will be used to check the user's scheduled times and schedule an appointment), checking already scheduled times is possible on web version and this project is also used to modify the user profile.
 
-Setup to get React working in Vite with HMR and some ESLint rules.
+Configuration to make React work on Vite with HMR and some ESLint rules.
 
 ### Screenshot
 
